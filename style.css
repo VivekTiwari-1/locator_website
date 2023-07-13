@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Play&display=swap");
+@import url("path/to/font-awesome/css/font-awesome.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* global tags */
+
+h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+span {
+    font-size: 1.2rem;
+    color: rgb(24, 24, 49);
+    font-weight: 500;
+}
+h4{
+    font-size: 1rem;
+    color: rgb(100, 99, 98);
+    font-weight: 200;
+    padding: 20px 0 0 0;
+}
+
+nav{
+    height: 10vh;
+    width: 100%;
+    position: fixed !important ;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+nav .container-fluid .navbar-brand{
+    font-size: 2.5rem ;
+    font-weight: 500;
+    color: #292f2f !important;
+}
+
+/* nav{
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 4vw 1vw 2vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+nav .logo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4c545c;
+}
+
+nav .navigation{      
+    display: flex;
+}
+
+#menu-btn{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+#menu-close{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+nav .navigation ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+nav .navigation ul li a:hover{
+    color: aquamarine;
+} */
+
+#Home{
+    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(94, 95, 111, 0.5) ), url("images/bgHome.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Home h2{
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+
+#Home .btn{
+    margin: 40px;
+}
+
+#Home .btn a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: aliceblue;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#Home .btn a.blue{
+    color: rgb(21, 21, 100);
+    background: white;
+    transition: 0.3s ease;
+}
+
+#Home .btn a.blue:hover{
+    color: white;
+    background: rgb(21, 21, 100);
+}
+
+#Home .btn a.yellow{
+    color: white;
+    background: rgb(3, 75, 191);
+    transition: 0.3s ease;
+}
+
+#Home .btn a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background:white;
+}
+
+/* We Offer */
+
+#WeOffer{
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+}
+
+#WeOffer h1{
+    letter-spacing: 1px;
+}
+
+#WeOffer .offer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    margin-top: 40px;
+    /* display: flex;
+    flex-direction: row;
+    margin-top: 50px; */
+}
+
+#WeOffer .offer .offer-box img{
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in;
+}
+
+#WeOffer .offer .offer-box .offerContent{
+    padding: 20px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#WeOffer .offer .offer-box:hover{
+    cursor: pointer;
+    color: #7b838a;
+    font-size: 1.01rem;
+}
+
+/* Courses */
+
+#Course{
+    padding: 8vw 8vw 0 8vw;
+    text-align: center;
+}
+
+#Course h1{
+    padding-bottom: 20px;
+}
+
+h5{
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#Course .course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    grid-gap: 1.5rem;
+    margin-bottom: 100px;
+}
+
+#Course .courses{
+    text-align: start;
+    background: #f9f9ff;
+    height: 100%;
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+#Course .courses:hover{
+    cursor: pointer;
+}
+
+#Course .courses img{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in;
+}
+
+#Course .courses img:hover{
+    opacity: 0.7;
+  transform: scale(0.98);
+}
+
+#Course .courses .details{
+    padding: 15px 15px 0 15px;
+}
+
+/* #Course .courses .cost{
+    background-color: rgb(74, 74, 136);
+    color: #fff;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    bottom: 100px;
+} */
+
+/* Features */
+
+#Features{
+    padding: 2vw 8vw 10vw 8vw;
+    text-align: center;
+}
+
+#Features .fea-base{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    grid-gap: 3.5rem;
+    margin-top: 50px;
+}
+
+#Features .fea-base .fea-box .feature-head{
+    border-left: 0.5rem solid rgb(167, 164, 164);
+    background: rgb(244, 243, 243);
+    
+}
+
+#Features .fea-box{
+    
+    text-align: start;
+}
+
+#Features .fea-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(46, 46, 59);
+    padding: 17px 0 7px 2px;
+    border-left: #014fde;
+    border-width: 2px;
+}
+
+#Features .fea-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(70, 70, 87);
+    padding-left: 7px;
+}
+
+/* OurReach */
+
+.OurReach{
+    padding: 6px 8px 6px 8px;
+    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(113, 117, 146, 0.238)), url("images/ReachBg.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.OurReach .reminder{
+    color: #fff;
+    padding: 50px 0 ;
+}
+
+.OurReach .reminder p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.OurReach .reminder h1{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.OurReach .reminder .numbers{
+    display: flex;
+    margin-top: 40px;
+}
+
+.OurReach .reminder .numbers .data{
+    text-align: center;
+    padding: 13px 33px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.38);
+    border-radius: 5px;
+    margin: 0 5px 10px 5px;
+    transition: all 0.3s ease;
+}
+
+.OurReach .reminder .numbers .data:hover{
+    transform: translateY(-4px);
+}
+
+/* Footer */
+
+footer{
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .footer-col{
+    padding: 40px;
+}
+footer h3{
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+footer li:hover{
+    color: #fff;
+}
+
+footer p{
+    color: #7b838a;
+}
+
+footer .subscribe{
+    margin-top: 20px;
+}
+
+footer input{
+    width: 220px;
+    padding: 15px 12px;
+    background: #334F6C;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 15px 12px;
+    background-color: aliceblue;
+    font-weight: 600;
+}
+
+footer .subscribe a.yellow{
+    color: white;
+    background: rgb(2, 56, 141);
+    transition: 0.3s ease;
+}
+
+footer .subscribe a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background:white;
+}
+
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .copyright .pro-links{
+    font-size: 2rem;
+}
+
+footer .copyright .pro-links i{
+    margin-right: 15px;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+footer .copyright .pro-links i:hover{
+    color: #d4d4d4;
+    font-size: 1.9rem;
+}
+
+@media(max-width:1000px){
+    #Home h2{
+        padding: 0 0 0 25px;
+    }
+}
+@media(max-width:769px){
+    nav{
+        padding: 15px 20px;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    #menu-close{
+        display: initial;
+        
+    }
+    nav .navigation ul{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 220px;
+        height: 100vh;
+        background: rgba(17, 20, 104, 0.45);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+    nav .navigation ul.active{
+        right: 0;
+    }
+    nav .navigation ul li{
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+    nav .navigation ul li a{
+        color: #fff;
+    }
+    .OurReach .reminder .numbers{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+    #Home{
+        padding-top: 0px;
+    }
+    #Features{
+        padding: 8vw 4vw 0 4vw ;
+    }
+    #Course{
+        padding: 8vw 4vw 0 4vw ;
+    }
+    footer .subscribe{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer-col{
+        padding: 10px;
+    }
+    footer .subscribe .yellow{
+        width: 200px;
+    }
+
+    @media(max-width: 450px){
+    nav .container-fluid .navbar-brand{
+        font-size: 2rem;
+    }
+    }
+
+    @media(max-width: 415px){
+        #Home h2{
+            padding: 0 0 0 50px;
+        } 
+        
+        nav{
+            height: 15vh;
+        }
+        nav .container-fluid .navbar-brand{
+            padding-left: 30vw;
+        }
+        nav .container-fluid .d-flex{
+            padding-left: 10vw;
+        }
+        #Home .btn{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+           
+        }
+    }
+}
