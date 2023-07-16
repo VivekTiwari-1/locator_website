@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Play&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:  rgb(93 80 80 / 7%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.about-home
+{
+    background-image: linear-gradient(rgba(236, 160, 83, 0.3),rgba(63, 36, 5, 0.7)),url("bg.png/history1.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+.about-home h2{
+     color: white;
+     font-size: 5rem;
+     letter-spacing: 1px;
+}
+.about-home span{
+    color: rgb(254, 97, 0);
+    font-size: 5rem;
+     letter-spacing: 1px;
+}
+.about-home p{
+    padding-top: 40px;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+/* home main html ke ander ye code jayega */
+/* to make two section one for image n other for text  */
+#about-container
+{
+ display: flex;
+ align-items: center;
+ padding: 8vw 8vw 2vw 8vw;
+ /* do this to align text on right  */
+}
+#about-container .about-img
+{
+ width: 50% ;
+
+
+}
+#about-container .about-text
+{
+ width: 40% ;
+ padding: 60px;
+}
+#about-container .about-text h2
+{
+    color: aqua;
+    padding-bottom: 15px;
+
+}
+#about-container .about-text p
+{
+    color: rgb(219, 196, 51);
+    
+    font-weight: 300;
+    
+}
+#about-container .about-text .about-fe
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+#about-container .about-text .about-fe img{
+    width: 50px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+#about-container .about-text .about-fe .fe-text
+{
+    width: 90%;
+
+}
+#about-container .about-text .about-fe .fe-text h5{
+    font-size: 16px;
+    color: rgb(83, 226, 43);
+}
+.image
+{
+border-radius: 50%;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+#trust
+{
+text-align: center;
+padding: 8vw;
+}
+#trust .trust-img img{
+    width: 90px;
+    height: auto;
+}
+
+#trust h1 {
+    display: inline-block;
+    position: relative;
+    color: #0c0f10;
+  }
+  
+  #trust h1:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1c3acd;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  #trust h1:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.title
+{
+    text-align: center;
+    font-size: 45px;
+    margin: 5vw 0 4vw 0vw;
+}
+#Course
+{
+  
+    padding: 0vw 8vw 8vw 8vw;
+    text-align: center;
+
+}
+#Course .course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-gap: 1.5rem;
+    /* margin-bottom: 100px; */
+    /* padding: 10px; */
+}
+
+#Course .courses{
+    text-align: center;
+    /* background: #f9f9ff; */
+    height: 100%;
+    padding: 3px 50px;
+    /* position: relative; */
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+}
+
+#Course .courses:hover{
+    cursor: pointer;
+}
+
+#Course .courses img{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in;
+}
+
+#Course .courses img:hover{
+    opacity: 0.7;
+  transform: scale(0.98);
+}
+.img{
+border-radius: 50%;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+span
+{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+span {
+    display: inline-block;
+    position: relative;
+    color: #0c0f10;
+  }
+  
+  /* span:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e213c3;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  } */
+  
+  /* span:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  } */
+h4{
+    padding-top: 10px;
+}
+.details
+{
+    padding-top: 20px;
+}
+#history-box
+{
+    display: flex;
+    align-items: center;
+    padding: 10vw;
+    margin: -200px 13px;
+}
+#history-box img{
+    width: 31%;
+    height: 31%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in;
+    
+}
+ /* #history-box img{
+    border: 2px solid red;
+    padding: 2px 2px;
+
+} */
+#history-box .text p{
+    border: 2px solid black;
+    padding: 52px 53px 55px 75px;
+    font-size: 23px;
+    background-color: #c2705b5e;
+    border-radius: 12px;
+}
+
+.history-img
+{
+    border-radius: 50%;
+    padding: 0 0 0 0;
+    margin: 0px -45px;
+    z-index: 342;
+}
+#history-box-opposite
+{
+    display: flex;
+    align-items: center;
+    padding: 10vw;
+    margin: -200px 13px;
+}
+#history-box-opposite img{
+    width: 31%;
+    height: 31%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in;
+    
+}
+
+#history-box-opposite .text-opposite{
+    border: 2px solid black;
+    padding: 52px 53px 55px 75px;
+    font-size: 23px;
+    background-color: #56432763;
+    border-radius: 12px;
+}
+.history-img-opposite
+{
+    border-radius: 50%;
+    padding: 0 0 0 0;
+    margin: 0px -45px;
+    z-index: 342;
+}
+.ashish{
+    display: flex;
+    margin: 0 0 ;
+    
+}
+/* OurReach */
+
+.OurReach{
+    padding: 6px 8px 6px 8px;
+    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(113, 117, 146, 0.238)), url("bg.png/WhatsApp\ Image\ 2023-07-16\ at\ 3.59.04\ PM.jpeg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.OurReach .reminder{
+    color: #fff;
+    padding: 50px 0 ;
+}
+
+.OurReach .reminder p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.OurReach .reminder h1{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.OurReach .reminder .numbers{
+    display: flex;
+    margin-top: 40px;
+}
+
+.OurReach .reminder .numbers .data{
+    text-align: center;
+    padding: 13px 33px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.38);
+    border-radius: 5px;
+    margin: 0 5px 10px 5px;
+    transition: all 0.3s ease;
+}
+
+.OurReach .reminder .numbers .data:hover{
+    transform: translateY(-4px);
+}
+/* Footer */
+
+footer{
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .footer-col{
+    padding: 40px;
+}
+footer h3{
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+footer li:hover{
+    color: #fff;
+}
+
+footer p{
+    color: #7b838a;
+}
+
+footer .subscribe{
+    margin-top: 20px;
+}
+
+footer input{
+    width: 220px;
+    height: 50px;
+    padding: 15px 12px;
+    background: #334F6C;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 15px 12px;
+    background-color: aliceblue;
+    font-weight: 600;
+}
+
+footer .subscribe a.yellow{
+    color: white;
+    background: rgb(2, 56, 141);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+footer .subscribe a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background:white;
+}
+
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .copyright .pro-links{
+    font-size: 2rem;
+}
+
+footer .copyright .pro-links i{
+    margin-right: 15px;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+footer .copyright .pro-links i:hover{
+    color: #d4d4d4;
+    font-size: 1.9rem;
+}
+@media(max-width:769px){
+    footer .subscribe{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer-col{
+        padding: 20px;
+    }
+    footer .subscribe .yellow{
+        width: 200px;
+    }
+}
+

@@ -1,0 +1,6 @@
+var scr = document.createElement('script');
+scr.async = true;
+scr.type = 'text/javascript';
+scr.src = 'https://static.kueezrtb.com/js/latest.js?_=' + Date.now();
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(scr, node);

@@ -1,0 +1,2 @@
+var ipCountry   = "in";
+var clientIP    = "103.199.180.112";

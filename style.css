@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body {
@@ -30,6 +31,11 @@ h4{
     padding: 20px 0 0 0;
 }
 
+a{
+    text-decoration: none;
+    color: #292f2f;
+}
+
 nav{
     height: 10vh;
     width: 100%;
@@ -44,64 +50,8 @@ nav .container-fluid .navbar-brand{
     color: #292f2f !important;
 }
 
-/* nav{
-    height: 10vh;
-    width: 100%;
-    position: fixed;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vw 4vw 1vw 2vw;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-}
-nav .logo{
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #4c545c;
-}
-
-nav .navigation{      
-    display: flex;
-}
-
-#menu-btn{
-    width: 30px;
-    height: 30px;
-    display: none;
-}
-#menu-close{
-    width: 30px;
-    height: 30px;
-    display: none;
-}
-
-nav .navigation ul{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-nav .navigation ul li{
-    list-style: none;
-    margin-left: 30px;
-}
-
-nav .navigation ul li a{
-    text-decoration: none;
-    color: rgb(21, 21, 100);
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.3s ease;
-}
-nav .navigation ul li a:hover{
-    color: aquamarine;
-} */
-
 #Home{
-    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(94, 95, 111, 0.5) ), url("images/bgHome.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0,0.1),rgba(84, 76, 61, 0.5) ), url("images/tourismImg/Homepage-bg.webp");
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -114,6 +64,12 @@ nav .navigation ul li a:hover{
 #Home h2{
     color: aliceblue;
     letter-spacing: 2px;
+    padding-bottom: 15px;
+}
+
+#Home p{
+    color: #f9f9ff;
+    letter-spacing: 1px;
 }
 
 #Home .btn{
@@ -130,19 +86,19 @@ nav .navigation ul li a:hover{
 }
 
 #Home .btn a.blue{
-    color: rgb(21, 21, 100);
-    background: white;
+    color: #fff;
+    background: rgb(75, 70, 70);
     transition: 0.3s ease;
 }
 
 #Home .btn a.blue:hover{
-    color: white;
-    background: rgb(21, 21, 100);
+    color: black;
+    background: white;
 }
 
 #Home .btn a.yellow{
     color: white;
-    background: rgb(3, 75, 191);
+    background: rgb(144, 86, 0);
     transition: 0.3s ease;
 }
 
@@ -166,9 +122,24 @@ nav .navigation ul li a:hover{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
     margin-top: 40px;
-    /* display: flex;
-    flex-direction: row;
-    margin-top: 50px; */
+}
+
+#WeOffer .offer .offer-box{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+#WeOffer .offer .offer-box:hover{
+    cursor: pointer;
+    color: #7b838a;
+    font-size: 1.01rem;
+    /* transform: translateZ(24px); */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
 }
 
 #WeOffer .offer .offer-box img{
@@ -176,7 +147,10 @@ nav .navigation ul li a:hover{
     height: 50%;
     background-size: cover;
     background-position: center;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease;
+}
+#WeOffer .offer .offer-box img:hover{
+    transform: translateY(-7px);
 }
 
 #WeOffer .offer .offer-box .offerContent{
@@ -186,10 +160,59 @@ nav .navigation ul li a:hover{
     letter-spacing: 1px;
 }
 
-#WeOffer .offer .offer-box:hover{
+/* Common Layering */
+
+.row{
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
-    color: #7b838a;
-    font-size: 1.01rem;
+    width: 100%;
+    height: 65%;
+    --bs-gutter-x: 0;
+}
+
+.row img{
+    
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(252, 252, 252, 0.1), rgb(48, 48, 48));
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.5s;
+}
+
+.layer .btn{
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.layer .btn:hover{
+    background-color: rgb(255, 89, 0);
+    border: 1px solid rgb(255, 89, 0);
+}
+
+.row:hover img{
+    transform: scale(1.1);
+}
+
+.row:hover .layer{
+    height: 100%;
+    border-radius: 0;
 }
 
 /* Courses */
@@ -230,7 +253,7 @@ h5{
 
 #Course .courses img{
     width: 100%;
-    height: 60%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     transition: all 0.5s ease-in;
@@ -279,7 +302,6 @@ h5{
 }
 
 #Features .fea-box{
-    
     text-align: start;
 }
 
@@ -297,6 +319,62 @@ h5{
     font-weight: 400;
     color: rgb(70, 70, 87);
     padding-left: 7px;
+}
+
+/* Trust Section */
+
+#trust .trustbox{
+    margin: 5vw 8vw 5vw 8vw;
+    height: 65vh;
+    background: rgb(244, 243, 243);
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.trustbox .content{
+    padding: 1vw 1vw 1vw 4vw;
+    width: 50%;
+}
+
+.trustbox img{
+    padding: 1vw 1vw 1vw 8vw;
+    width: 40%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+}
+
+.trustbox h1{
+    padding-bottom: 1vw;
+}
+
+.trustbox h6{
+    padding-bottom: 1vw;
+}
+
+.trustbox .follow{
+    margin-top: 30px;
+}
+
+.follow{
+    font-size: 2rem;
+}
+.follow i{
+    margin-right: 15px;
+    color: rgb(46, 46, 59);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.follow i:hover{
+    color: rgb(141, 141, 152);
+    font-size: 1.9rem;
 }
 
 /* OurReach */
@@ -452,7 +530,23 @@ footer .copyright .pro-links i:hover{
     #Home h2{
         padding: 0 0 0 25px;
     }
+    #trust .trustbox{
+        margin: 5vw 2vw 5vw 2vw;
+        height: 80vh;
+    }
+    .trustbox img{
+        width: 50%;
+        height: 70%;
+    }
 }
+
+@media(max-width:913px){
+    .trustbox img{
+        width: 40%;
+        height: 40%;
+    }
+}
+
 @media(max-width:769px){
     nav{
         padding: 15px 20px;
@@ -464,31 +558,7 @@ footer .copyright .pro-links i:hover{
         display: initial;
         
     }
-    nav .navigation ul{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 220px;
-        height: 100vh;
-        background: rgba(17, 20, 104, 0.45);
-        backdrop-filter: blur(4.5px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        transition: 0.3s ease;
-    }
-    nav .navigation ul.active{
-        right: 0;
-    }
-    nav .navigation ul li{
-        padding: 20px 0 20px 40px;
-        margin-left: 0;
-    }
-    nav .navigation ul li a{
-        color: #fff;
-    }
+
     .OurReach .reminder .numbers{
         display: flex;
         flex-wrap: wrap;
@@ -513,6 +583,7 @@ footer .copyright .pro-links i:hover{
     footer .subscribe .yellow{
         width: 200px;
     }
+}
 
     @media(max-width: 450px){
     nav .container-fluid .navbar-brand{
@@ -540,5 +611,13 @@ footer .copyright .pro-links i:hover{
             margin: 10px;
            
         }
+        #trust .trustbox{
+            height: 50vh;
+        }
+        .trustbox img{
+            width: 0;
+        }
+        .trustbox .content{
+            width: 100%;
+        }
     }
-}

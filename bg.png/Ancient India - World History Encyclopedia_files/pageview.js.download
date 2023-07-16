@@ -1,0 +1,14 @@
+var wheAnalyticsData={};var wheAnalyticsSent=false;function wheAnalyticsPageview(){wheAnalyticsRecord('pageview');}
+function wheAnalyticsArticleread(){wheAnalyticsRecord('articleread');}
+function wheAnalyticsRecord(path){let pathname=new URL(window.location).pathname;let canonical;if(!isBot()){wheAnalyticsData={p:path,guid:AHE.ci_id,lang:AHE.contentLang||document.querySelector('html').getAttribute('lang').substr(0,2),author:AHE.ci_author,author_id:AHE.ci_author_id,translator:AHE.ci_translator,translator_id:AHE.ci_translator_id,url:pathname,ab:AHE.ab,known:AHE.knownUser,};if(canonical=document.querySelector('link[rel=canonical]')){if(typeof canonical.href=='string'){canonical=canonical.href.replace(new URL(canonical.href).origin,'');wheAnalyticsData.url=canonical;}}
+if(!getCookie('wheAnalyticsUserKnown')){wheAnalyticsData.new_user=1;}
+if(!getCookie('wheAnalyticsSessionKnown')){wheAnalyticsData.new_session=1;}
+let apiUrl=new URL(window.location.protocol+'//'+window.location.host+'/analytics/');Object.keys(wheAnalyticsData).forEach(key=>apiUrl.searchParams.append(key,wheAnalyticsData[key]))
+wheAnalyticsSent=true;fetch(apiUrl).then((response)=>response.json()).then((result)=>{if(result.status>=400){console.error('WHE Analytics:','error',result);}else{console.log('WHE Analytics:','pageview sent',result);}
+setCookie('wheAnalyticsUserKnown',1,365);setCookie('wheAnalyticsSessionKnown',1);});}}
+function isBot(){return navigator.webdriver;}
+function getCookie(c_name){var i,x,y,ARRcookies=document.cookie.split(";");for(i=0;i<ARRcookies.length;i++){x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);x=x.replace(/^\s+|\s+$/g,"");if(x==c_name){return unescape(y);}}}
+function setCookie(name,value,days,sameSite){var expires='';if(days>0){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));expires="; expires="+date.toGMTString();}
+if(!sameSite){sameSite='Lax';}
+let domain='';if(AHE.domain){domain=' domain='+AHE.domain+';';}
+let cookiestring=name+"="+value+expires+";"+domain+" path=/; SameSite="+sameSite+"; Secure";document.cookie=cookiestring;}

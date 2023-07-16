@@ -1,0 +1,1034 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Play&display=swap");
+@import url("path/to/font-awesome/css/font-awesome.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #292f2f;
+}
+
+span{
+    color: rgb(250, 96, 0);
+}
+
+nav{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav .container-fluid .navbar-brand{
+    font-size: 2rem ;
+    font-weight: 500;
+    color: #292f2f !important;
+}
+
+#tourHome{
+    background: linear-gradient(rgba(244, 244, 244, 0.1),rgb(235, 190, 162)) ;
+    height: 91vh;
+    width: 100%; 
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    padding: 0 10vw 0 0;
+}
+
+#tourHome .HomeImg{
+    padding: 20px 30px 30px 20px;
+}
+
+#tourHome .HomeImg p{
+    width: 40vw;
+    height: 70vh;
+    background: url("images/tourismImg/header.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+#tourHome .homeText{
+    padding-left: 7vw;
+}
+
+#tourHome .homeText h1{
+    font-size: 4rem;
+    color:#292f2f;
+    padding-bottom: 40px;
+}
+
+.homeText p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #3b3f3f;
+}
+
+#WeOffer{
+    padding: 5vw 8vw 8vw 8vw;
+    
+}
+
+#WeOffer h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#WeOffer .offer{
+    display: flex;
+    margin-top: 30px;
+    gap: 2.4vw;
+}
+
+#WeOffer .offer .offer-box{
+    width: 14vw;
+    height: 14vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in;
+}
+
+#WeOffer .offer .offer-box:hover{
+    cursor: pointer;
+    color: #7b838a;
+    font-size: 1.01rem;
+    border-color: rgb(255, 89, 0);
+}
+
+#WeOffer .offer .offer-box img{
+    width: 40%;
+    height: 40%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+#WeOffer .offer .offer-box:hover img{
+transform: translateY(-4px);
+}
+
+#WeOffer .offer .offer-box .offerContent{
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Trending in India */
+
+#trendIndia{
+    padding: 2vw 8vw 2vw 8vw;
+    
+}
+
+#trendIndia h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#trendIndia .trendCont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    margin-top: 30px;
+    gap: 1.5vw;
+}
+
+#trendIndia .trendCont .trendBox{
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+    transition: all 0.5s ease;
+}
+
+/* Common for all box layer */
+
+.headBox{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2vw;
+}
+
+.headBox .btn{
+    color:gray;
+    border: 1px solid gray;
+    border-radius: 20px;
+    z-index: 1;
+    transition: transform 300ms ease-in-out;
+    position: relative;
+}
+
+.headBox .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 20px;
+    background-color: rgb(255, 89, 0);
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.headBox .btn:hover::before,
+.headBox .btn:focus::before{
+    transform: scaleX(1);
+}
+
+.headBox .btn:hover,.headBox .btn:focus{
+    /* background: rgb(255, 89, 0); */
+    color: #fff;
+    border: 1px solid rgb(255, 89, 0);
+}
+
+/* Common Layering */
+
+.row{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    height: 65%;
+    --bs-gutter-x: 0;
+}
+
+.row img{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1), rgb(48, 48, 48));
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.5s;
+}
+
+.layer .btn{
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.layer .btn:hover{
+    background-color: rgb(255, 89, 0);
+    border: 1px solid rgb(255, 89, 0);
+}
+
+.row:hover img{
+    transform: scale(1.1);
+}
+
+.row:hover .layer{
+    height: 100%;
+    border-radius: 0;
+}
+
+.offerContent{
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Spritual section */
+
+#Pilgrimage{
+    padding: 1vw 8vw 2vw 8vw;
+    
+}
+
+#Pilgrimage h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.pilgrimageCont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    margin-top: 30px;
+    gap: 1.5vw;
+}
+
+.pilgrimageBox{
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+    transition: all 0.5s ease;
+}
+
+/* Nearby Packages Section */
+
+#nearby{
+    padding: 1vw 8vw 2vw 8vw;
+    
+}
+
+#nearby h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nearbyCont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    margin-top: 30px;
+    gap: 1.5vw;
+}
+
+.nearbyBox{
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+    transition: all 0.5s ease;
+}
+
+/* Trending tour Packages */
+
+#trendTourPackages{
+    padding: 1vw 8vw 2vw 8vw;
+    
+}
+
+#trendTourPackages h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.TTPCont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    margin-top: 30px;
+    gap: 1.5vw;
+}
+
+.TTPBox{
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+    transition: all 0.5s ease;
+}
+
+/* HoneyMoon Section */
+
+#honeyMoon{
+    padding: 1vw 8vw 2vw 8vw;
+    
+}
+
+#honeyMoon h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.HMCont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    margin-top: 30px;
+    gap: 1.5vw;
+}
+
+.HMBox{
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+    transition: all 0.5s ease;
+}
+
+/* Newsletter Section */
+
+#newsLt .box{
+    margin: 4vw 8vw 8vw 8vw;
+    background: rgb(242, 224, 213);
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.box img{
+    padding: 1vw 4vw 1vw 1vw;
+    width: 40%;
+    height: 40%;
+    background-size: cover;
+    background-position: center;
+}
+
+.box span{
+    color: rgb(250, 96, 0);
+}
+
+.box .subscribe{
+    margin-top: 30px;
+}
+
+.box input{
+    width: 50%;
+    height: 50px;
+    padding: 15px 12px;
+    background: rgb(239, 231, 227);
+    color:rgb(48, 48, 48);
+    border: 1px solid grey;
+    border-radius: 10px;
+   
+}
+
+.box a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 15px 12px;
+    background-color: aliceblue;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.box a.yellow{
+    color: white;
+    background: rgb(250, 96, 0);
+    transition: 0.3s ease;
+}
+
+.box a.yellow:hover{
+    /* color:rgb(48, 48, 48); */
+    background: rgb(223, 86, 1);
+    /* border: 1px solid grey; */
+}
+
+/* Adventure Tour Section */
+
+#adventure{
+    padding: 1vw 8vw 2vw 8vw;
+    
+}
+
+#adventure h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.advCont{
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.advBox{
+    height: 20vw;
+    width: 30vw;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+.advBox .row{
+    height: 100%;
+}
+
+.advBox .layer{
+    background: linear-gradient(rgba(0,0,0,0.1), rgb(58, 83, 226));
+    transition: transform 0.5s;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.advBox .layer .btn:hover{
+    background-color: rgb(8, 35, 185);
+    border: 1px solid rgb(8, 35, 185);
+}
+
+.advBox .layer p{
+    padding: 30px 0 40px 20px;
+    color: #fafafa;
+    font-family: 'Lumanosimo', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Wildlife Tour Section */
+
+#wildlife{
+    padding: 3vw 8vw 2vw 8vw;
+    
+}
+
+#wildlife h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.WLCont{
+    display: flex;
+    gap: 40px;
+}
+
+.WLBox{
+    height: 20vw;
+    width: 30vw;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+.WLBox .row{
+    height: 100%;
+}
+
+.WLBox .layer{
+    background: linear-gradient(rgba(0,0,0,0.1), rgb(7, 219, 42));
+    transition: transform 0.5s;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.WLBox .layer .btn:hover{
+    background-color: rgb(0, 150, 18);
+    border: 1px solid rgb(0, 150, 18);
+}
+
+.WLBox .layer p{
+    padding: 30px 0 40px 20px;
+    color: #fafafa;
+    font-family: 'Lumanosimo', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Beaches Section */
+
+#beaches{
+    padding: 3vw 8vw 2vw 8vw;
+    
+}
+
+#beaches h1{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.beachCont{
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.beachBox{
+    height: 20vw;
+    width: 15vw;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+.beachBox .row{
+    height: 100%;
+}
+
+.beachBox .layer{
+    background: linear-gradient(rgba(0,0,0,0.1), rgb(5, 216, 244));
+    transition: transform 0.5s;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.beachBox .layer .btn:hover{
+    background-color: rgb(0, 162, 167);
+    border: 1px solid rgb(0, 179, 244);
+}
+
+.beachBox .layer p{
+    padding: 30px 0 40px 20px;
+    color: #fafafa;
+    font-family: 'Lumanosimo', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Trust Section */
+
+#trust .trustbox{
+    margin: 5vw 8vw 5vw 8vw;
+    height: 65vh;
+    background: rgb(248, 232, 221);
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.trustbox .content{
+    padding: 1vw 1vw 1vw 4vw;
+    width: 50%;
+}
+
+.trustbox img{
+    padding: 1vw 1vw 1vw 8vw;
+    width: 40%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+}
+
+.trustbox span{
+    color: rgb(250, 96, 0);
+}
+
+.trustbox h1{
+    padding-bottom: 1vw;
+}
+
+.trustbox h6{
+    padding-bottom: 1vw;
+}
+
+.trustbox .follow{
+    margin-top: 30px;
+}
+
+.follow{
+    font-size: 2rem;
+}
+.follow i{
+    margin-right: 15px;
+    color: rgb(250, 96, 0);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.follow i:hover{
+    color: rgb(235, 190, 160);
+    font-size: 1.9rem;
+}
+
+/* OurReach */
+
+.OurReach{
+    padding: 6px 8px 6px 8px;
+    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(113, 117, 146, 0.238)), url("images/tourismImg/Tourism-Reach-bg1.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position:bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.OurReach .reminder{
+    color: #fff;
+    padding: 50px 0 ;
+}
+
+.OurReach .reminder p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.OurReach .reminder h1{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.OurReach .reminder .numbers{
+    display: flex;
+    margin-top: 40px;
+}
+
+.OurReach .reminder .numbers .data{
+    text-align: center;
+    padding: 13px 25px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.38);
+    border-radius: 5px;
+    margin: 0 5px 10px 5px;
+    transition: all 0.3s ease;
+}
+
+.OurReach .reminder .numbers .data:hover{
+    transform: translateY(-4px);
+}
+
+/* Footer */
+
+footer{
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .footer-col{
+    padding: 40px;
+}
+footer h3{
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+footer li:hover{
+    color: #fff;
+}
+
+footer p{
+    color: #7b838a;
+}
+
+footer .subscribe{
+    margin-top: 20px;
+}
+
+footer input{
+    width: 220px;
+    height: 50px;
+    padding: 15px 12px;
+    background: #334F6C;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 15px 12px;
+    background-color: aliceblue;
+    font-weight: 600;
+}
+
+footer .subscribe a.yellow{
+    color: white;
+    background: rgb(2, 56, 141);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+footer .subscribe a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background:white;
+}
+
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .copyright .pro-links{
+    font-size: 2rem;
+}
+
+footer .copyright .pro-links i{
+    margin-right: 15px;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+footer .copyright .pro-links i:hover{
+    color: #d4d4d4;
+    font-size: 1.9rem;
+}
+
+/* Responsiveness Section */
+
+@media(max-width:1025px){
+    #Home h2{
+        padding: 0 0 0 25px;
+    }
+    #newsLt .box{
+        margin: 5vw 2vw 5vw 2vw;
+        height: 70vh;
+    }
+    .box img{
+        width: 40%;
+        height: 70%;
+    }
+    #trust .trustbox{
+        margin: 5vw 2vw 5vw 2vw;
+        height: 80vh;
+    }
+    .trustbox img{
+        width: 50%;
+        height: 70%;
+    }
+}
+
+@media(max-width:913px){
+    .advCont{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+   }
+   .advBox{
+    height: 35vw;
+    width: 25vw;
+    }
+    .WLCont{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+   }
+   .WLBox{
+    height: 35vw;
+    width: 25vw;
+    }
+    .beachCont{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+   }
+   .beachBox{
+    height: 35vw;
+    width: 25vw;
+    }
+    .trustbox img{
+        width: 40%;
+        height: 40%;
+    }
+}
+
+@media(max-width:769px){
+    nav{
+        padding: 15px 20px;
+    }
+    #WeOffer .offer{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        gap: 3vw;
+    }
+    
+    #WeOffer .offer .offer-box{
+        width: 20vw;
+        height: 20vw;
+    }
+
+    #adventure{
+        padding: 3vw 4vw 2vw 8vw;
+        
+    }
+
+    .advCont{ 
+        gap: 30px;
+    }
+    .advBox{
+        height: 50vw;
+        width: 40vw;
+    }
+    #wildlife{
+        padding: 3vw 4vw 2vw 8vw;
+        
+    }
+    .WLCont{ 
+        gap: 30px;
+    }
+    .WLBox{
+        height: 50vw;
+        width: 40vw;
+    }
+    #beaches{
+        padding: 3vw 4vw 2vw 8vw;
+        
+    }
+    .beachCont{ 
+        gap: 30px;
+    }
+    .beachBox{
+        height: 50vw;
+        width: 40vw;
+    }
+
+    .OurReach .reminder .numbers{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    #Home{
+        padding-top: 0px;
+    }
+    #Pilgrimage{
+        padding: 8vw 4vw 0 4vw ;
+    }
+    #trendIndia{
+        padding: 8vw 4vw 0 4vw ;
+    }
+    #nearby{
+        padding: 8vw 4vw 0 4vw ;
+    }
+    #trendTourPackages{
+        padding: 8vw 4vw 0 4vw ;
+    }
+    #honeyMoon{
+        padding: 8vw 4vw 0 4vw ;
+    }
+    footer .subscribe{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer-col{
+        padding: 20px;
+    }
+    footer .subscribe .yellow{
+        width: 200px;
+    }
+}
+
+@media(max-width: 540px){
+    #WeOffer .offer{
+        gap: 3vw;
+    }
+    
+    #WeOffer .offer .offer-box{
+        width: 25vw;
+        height: 25vw;
+    }
+    #tourHome .homeText h1{
+        font-size: 2.5rem;
+    }
+    #tourHome .homeText p{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+    @media(max-width: 450px){
+    nav .container-fluid .navbar-brand{
+        font-size: 2rem;
+    }
+    }
+
+    @media(max-width: 415px){     
+        nav{
+            height: 15vh;
+        }
+        nav .container-fluid .navbar-brand{
+            padding-left: 30vw;
+        }
+        nav .container-fluid .d-flex{
+            padding-left: 10vw;
+        }
+        
+        #tourHome .homeText h1{
+            font-size: 1.8rem;
+        }
+        #tourHome .homeText p{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        #newsLt .box{
+            height: 40vh;
+        }
+        .box img{
+            width: 0;
+        }
+        .box .content{
+            width: 100%;
+        }
+
+        #adventure{
+            padding: 3vw 4vw 2vw 4vw;
+            
+        }
+        .advCont{
+            gap: 20px;
+        }
+        
+        .advBox{
+            height: 100vw;
+            width: 90vw;
+        }
+        #wildlife{
+            padding: 3vw 4vw 2vw 4vw;
+            
+        }
+        .WLCont{
+            gap: 20px;
+        }
+        
+        .WLBox{
+            height: 100vw;
+            width: 90vw;
+        }
+        #beaches{
+            padding: 3vw 4vw 2vw 4vw;
+            
+        }
+        .beachCont{
+            gap: 20px;
+        }
+        
+        .beachBox{
+            height: 100vw;
+            width: 90vw;
+        }
+        #trust .trustbox{
+            height: 50vh;
+        }
+        .trustbox img{
+            width: 0;
+        }
+        .trustbox .content{
+            width: 100%;
+        }
+    }
+    @media(max-width: 281px){
+        #WeOffer .offer{
+            gap: 3vw;
+        }
+        #WeOffer .offer .offer-box{
+            width: 40vw;
+            height: 30vw;
+        }
+        #tourHome .homeText h1{
+            font-size: 1.2rem;
+            padding-bottom: 20px;
+        }
+        #tourHome .homeText p{
+            font-size: 0.7rem;
+        }
+        }

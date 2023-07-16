@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Play&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:  rgb(93 80 80 / 7%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.about-home
+{
+    background-image: linear-gradient(rgba(9,7,6,0.3),rgba(5,4,46,0.7)),url("bg.png/geography.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    box-shadow:2px 2px 10px rgba(29, 29, 39, 0.1) ;
+}
+.about-home h2{
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.about-home p{
+    padding-top: 40px;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.title
+{
+    text-align: center;
+    font-size: 45px;
+    margin: 5vw 0 4vw 0vw;
+}
+#Course
+{
+  
+    padding: 0vw 8vw 8vw 8vw;
+    text-align: center;
+
+}
+#Course .course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-gap: 1.5rem;
+    /* margin-bottom: 100px; */
+    /* padding: 10px; */
+}
+
+#Course .courses{
+    text-align: center;
+    /* background: #f9f9ff; */
+    height: 100%;
+    padding: 10px 15px;
+    border-radius: 30px;
+    /* box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; */
+    /* box-shadow: rgba(43, 10, 209, 0.17) 0px -23px 25px 0px inset, rgba(45,10,209, 0.15) 0px -36px 30px 0px inset, rgba(45,10,209, 0.1) 0px -79px 40px 0px inset, rgba(45,10,209, 0.06) 0px 2px 1px, rgba(45,10,209, 0.09) 0px 4px 2px, rgba(45,10,209, 0.09) 0px 8px 4px, rgba(45,10,209, 0.09) 0px 16px 8px, rgba(45,10,209, 0.09) 0px 32px 16px; */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    /* position: relative; */
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+}
+
+#Course .courses:hover{
+    cursor: pointer;
+}
+
+#Course .courses img{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in;
+}
+
+#Course .courses img:hover{
+    opacity: 0.7;
+  transform: scale(0.98);
+}
+.img{
+border-radius: 20px;
+box-shadow: 2px 2px 10px rgba(17, 17, 26, 0.1);
+}
+span
+{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+span {
+    display: inline-block;
+    position: relative;
+    color: #0c0f10;
+  }
+  
+  /* span:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e213c3;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  span:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  } */
+h4{
+    padding-top: 10px;
+}
+.details
+{
+    padding-top: 20px;
+}
+
+#category
+{
+    /* border: 2px solid red; */
+    display: inline-block;
+    float: right;
+    margin: -425px 0 ;
+    /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; */
+}
+#category span{
+    text-align: center;
+    
+
+}
+.category
+{
+    display: flex;
+    margin: 0 120px ;
+}
+.category i{
+    /* width: 50px;
+    height: 50px; */
+    text-decoration: none;
+    /* color: rgb(8, 8, 234); */
+    
+    color: black;
+    margin: 19px 4px;
+    font-size: 40px;
+ 
+}
+.category i:hover
+
+{
+    color:blue;
+}
+.category span{
+    margin: 0 20px ;
+    padding: 0 0 ;
+}
+.category h4{
+    margin: 0 20px;
+}
+#category .heading
+{
+    margin-left: 130px;
+    text-align: center;
+}
+
+#regions_div
+{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    border-radius: 10px;
+}
+/* OurReach */
+
+.OurReach{
+    padding: 6px 8px 6px 8px;
+    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(113, 117, 146, 0.238)), url("bg.png/WhatsApp\ Image\ 2023-07-16\ at\ 3.59.04\ PM.jpeg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.OurReach .reminder{
+    color: #fff;
+    padding: 50px 0 ;
+}
+
+.OurReach .reminder p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.OurReach .reminder h1{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.OurReach .reminder .numbers{
+    display: flex;
+    margin-top: 40px;
+}
+
+.OurReach .reminder .numbers .data{
+    text-align: center;
+    padding: 13px 33px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.38);
+    border-radius: 5px;
+    margin: 0 5px 10px 5px;
+    transition: all 0.3s ease;
+}
+
+.OurReach .reminder .numbers .data:hover{
+    transform: translateY(-4px);
+}
+/* Footer */
+
+footer{
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .footer-col{
+    padding: 40px;
+}
+footer h3{
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+footer li:hover{
+    color: #fff;
+}
+
+footer p{
+    color: #7b838a;
+}
+
+footer .subscribe{
+    margin-top: 20px;
+}
+
+footer input{
+    width: 220px;
+    height: 50px;
+    padding: 15px 12px;
+    background: #334F6C;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 15px 12px;
+    background-color: aliceblue;
+    font-weight: 600;
+}
+
+footer .subscribe a.yellow{
+    color: white;
+    background: rgb(2, 56, 141);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+footer .subscribe a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background:white;
+}
+
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .copyright .pro-links{
+    font-size: 2rem;
+}
+
+footer .copyright .pro-links i{
+    margin-right: 15px;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+footer .copyright .pro-links i:hover{
+    color: #d4d4d4;
+    font-size: 1.9rem;
+}
+@media(max-width:769px){
+
+    footer .subscribe{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer-col{
+        padding: 20px;
+    }
+    footer .subscribe .yellow{
+        width: 200px;
+    }
+}
+

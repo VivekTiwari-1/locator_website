@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>locator</title>
+    <link rel="stylesheet" href="geography.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Play&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Density'],
+          ['Germany', 200],
+          ['United States', 300],
+          ['Brazil', 400],
+          ['Canada', 500],
+          ['France', 600],
+          ['India', 700],
+          ['RU', 700]
+        ]);
+
+        var options = {
+            
+            // region: '002', // Africa
+        //   colorAxis: {colors: ['#00853f', 'black', '#e31b23']},
+          backgroundColor: '#81d4fa',
+        //   datalessRegionColor: '#f8bbd0',
+          dataRegionColor:'#0000ff',
+          defaultColor: '#0000ff',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div class="about-home">
+        <h2>The Science Of Our World </h2>
+        <p>Geography at your fingertips, Explore the world with us</p>
+       </div>
+    <div>
+        <p CLASS="title">Most Searched Geography Maps</p>
+    </div>
+    <section>
+        <div id="Course"> 
+            <div class="course-box">
+             <div class="courses">
+                 <img src="bg.png/mountains of india.webp" class="img" alt="">
+                 <div class="details">
+                     <span>Mountains</span>
+                     <h4>Write your description</h4>
+                 </div>
+             </div>
+             <div class="courses">
+                 <img src="bg.png/map of rivers in India.jpg" class="img" alt="">
+                 <div class="details">
+                     <span>Rivers</span>
+                     <h4>Write your description</h4>
+                 </div>
+             </div>
+             <div class="courses">
+               <img src="bg.png/state and.jpg" class="img" alt="">
+               <div class="details">
+                   <span>States and Union Terrotery</span>
+                   <h4>Write your description</h4>
+               </div>
+           </div>
+             <div class="courses">
+                 <img src="bg.png/climates of india.png" class="img" alt="">
+                 <div class="details">
+                     <span>Climates</span>
+                     <h4>Write your description</h4>
+                 </div>
+             </div>
+         </div>
+         </div>
+         <div id="Course"> 
+           <div class="course-box">
+            <div class="courses">
+                <img src="bg.png/minerals.jpg" class="img" alt="">
+                <div class="details">
+                    <span>Minerals</span>
+                    <h4>Write your description</h4>
+                </div>
+            </div>
+            <div class="courses">
+                <img src="bg.png/Food-Crop.png" class="img" alt="">
+                <div class="details">
+                    <span>food crops</span>
+                    <h4>Write your description</h4>
+                </div>
+            </div>
+            <div class="courses">
+              <img src="bg.png/india-map-forest.jpg" class="img" alt="">
+              <div class="details">
+                  <span>Indian forests</span>
+                  <h4>Write your description</h4>
+              </div>
+          </div>
+            <div class="courses">
+                <img src="bg.png/Natural-Vegetation-in-India.png" class="img" alt="">
+                <div class="details">
+                    <span>Vegetation</span>
+                    <h4>Write your description</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+         <div id="Course"> 
+           <div class="course-box">
+            <div class="courses">
+                <img src="bg.png/religion map of india.png" class="img" alt="">
+                <div class="details">
+                    <span>Railways</span>
+                    <h4>Write your description</h4>
+                </div>
+            </div>
+            <div class="courses">
+                <img src="bg.png/india-political-map.gif" class="img" alt="">
+                <div class="details">
+                    <span>Political</span>
+                    <h4>Write your description</h4>
+                </div>
+            </div>
+            <div class="courses">
+              <img src="bg.png/soil map of india.jpg" class="img" alt="">
+              <div class="details">
+                  <span>Soils</span>
+                  <h4>Write your description</h4>
+              </div>
+          </div>
+            <div class="courses">
+                <img src="bg.png/geography map of india.jpg" class="img" alt="">
+                <div class="details">
+                    <span>geography</span>
+                    <h4>Write your description</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="regions_div" style="width: 900px; height: 430px; margin-top: 40px;"></div>
+    <section id="category">
+        
+        <span class="heading">TOP CATEGORY :</span>
+        <div class="category">
+            <a href="#"><i class='bx bx-world'></i></a>
+            <div class="details">
+                <span>World Map</span>
+                <h4>is ipsa amet </h4>
+            </div>
+        </div>
+        <div class="category">
+            
+            <a href="#"><i class='bx bx-bus'></i></a>
+            <div class="details">
+                <span>Transportation</span>
+                <h4>is ipsa amet </h4>
+            </div>
+        </div>
+        <div class="category">
+            
+            <a href="#"><i class='bx bx-map'></i></i></a>
+            <div class="details">
+                <span>City Maps</span>
+                <h4>is ipsa amet </h4>
+            </div>
+        </div>
+        
+        <div class="category">
+            
+            <a href="#"><i class='bx bxs-group' ></i></a>
+            <div class="details">
+                <span>Population Density</span>
+                <h4>is ipsa amet </h4>
+            </div>
+        </div>
+        <div class="category">
+            <a href="#"><i class='bx bxs-cloud'></i></a>
+            <div class="details">
+                <span>Climate And Weather</span>
+                <h4>is ipsa amet </h4>
+            </div>
+        </div>
+    </section>
+    <!-- Our Reach -->
+
+    <section class="OurReach">
+        <div class="reminder">
+            <p>Get all your maps at one place</p>
+            <h1>Visit our website again</h1>
+            <div class="numbers">
+                <div class="data"> 5 <br> Continent </div>
+                <div class="data"> 20+ <br> Countries </div>
+                <div class="data"> 50+ <br> Cities </div>
+                <div class="data"> 1000+ <br> Maps </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+
+   <footer>
+    <div class="footer-col">
+        <h3>Categories</h3>
+        <li>History</li>
+        <li>Geography</li>
+        <li>Tourism</li>
+        <li>Institutes</li>
+    </div>
+    <div class="footer-col">
+        <h3>Legal Policy</h3>
+        <li>Contact us</li>
+        <li>Privacy policy</li>
+        <li>Terms & Conditions</li>
+        <li>Share Experience</li>
+    </div>
+    <div class="footer-col">
+        <h3>Tourism</h3>
+        <li>Pilgrimage</li>
+        <li>Hill Stations</li>
+        <li>Beaches</li>
+        <li>Adventure</li>
+    </div>
+    <div class="footer-col">
+        <h3>Links</h3>
+        <li>Testimonials</li>
+        <li>Blogs</li>
+        <li>Book Hotel</li>
+        <li>Kumbh Mela</li>
+    </div>
+    <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>Subscribe our Newsletter to get updated</p>
+        <div class="subscribe">
+            <input type="text" placeholder="Your email address">
+            <a href="#" class="yellow">SUBSCRIBE</a>
+        </div>    
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy 2023 by Vivek Tiwari All Rights Reserved </p>
+        <div class="pro-links"> 
+            <a href="https://www.instagram.com/_vivek_tiwarii/"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://twitter.com/Vivek_Tiwari29?t=iQyIUL5N9ce5eTOcfmc-5w&s=08"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.linkedin.com/in/vivek-tiwari-b929a822b/"><i class='bx bxl-linkedin-square' ></i></a>
+        </div>
+    </div>
+
+</footer>
+    
+</body>
+</html>
