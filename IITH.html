@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>locator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lumanosimo&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #homeIITH {
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(rgba(77, 72, 72, 0.1), rgb(37, 37, 50)), url("images/IITHbg.webp");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .IITHLogo {
+            height: 20vh;
+            width: 20vw;
+            background-image: url("images/IITHLogo.png");
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        h2 {
+            padding-top: 5vh;
+            color: #fff;
+        }
+
+        .icons {
+            padding: 30vh 0 10vh 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8vw;
+        }
+
+        .icBox {
+            height: 45px;
+            width: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(37, 37, 50);
+            border-radius: 50%;
+
+        }
+
+        .icBox:hover{
+            border: 1px solid #c8c8c8;
+        }
+
+        h1 {
+            padding-top: 10px;
+            font-size: 1rem;
+            color: #a7a7a7;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #a6c0c0;
+            font-size: 2rem;
+
+        }
+
+         #insider{
+            padding-top: 10vh;
+            padding-bottom: 4vh;
+            height: 40vh;
+            width: 40vh;
+            
+         }
+         .insiderBox{
+           
+            border: 1px solid #a7a7a7;
+            width: 70%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+         }
+
+         #insider i{
+            font-size: 4rem;
+            padding-bottom: 10px;
+         }
+         #insider a{
+            
+            text-decoration: none;
+            background-color: rgb(52, 52, 50);
+            color: #fff;
+            border-radius: 20px;
+         }
+
+    </style>
+</head>
+
+<body>
+
+    <section id="homeIITH">
+        <div class="IITHLogo"></div>
+        <h2>Indian Institute of Technology, Hyderabad</h2>
+        <div class="icons">
+            <div class="icCont">
+                <div class="icBox"><a href="#insider"><i class='bx bxs-phone-call'></i></a></div>
+                <h1>Isider</h1>
+            </div>
+            <div class="icCont">
+                <div class="icBox"><a href="#"><i class='bx bx-line-chart'></i></a></div>
+                <h1>Ranking</h1>
+            </div>
+            <div class="icCont">
+                <div class="icBox"><a href="#"><i class='bx bxs-book-alt'></i></a></div>
+                <h1>Courses</h1>
+            </div>
+            <div class="icCont">
+                <div class="icBox"><a href="#"><i class='bx bxs-briefcase-alt-2'></i></a></div>
+                <h1>Placements</h1>
+            </div>
+            <div class="icCont">
+                <div class="icBox"><a href="#"><i class='bx bx-table'></i></a></div>
+                <h1>Cutoff</h1>
+            </div>
+            <div class="icCont">
+                <div class="icBox"><a href="#"><i class='bx bx-rupee'></i></a></div>
+                <h1>Fees</h1>
+            </div>   
+        </div>
+        </div>
+    </section>
+
+    <section id="insider">
+        <h3>Contact our Insider</h3>
+        <div class="insiderBox">
+            <i class='bx bxs-phone-call'></i>
+            <a class="button" href="#"> Make a call </a>
+        </div>
+    </section>
+
+</body>
+
+</html>
